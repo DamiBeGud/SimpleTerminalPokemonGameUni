@@ -8,12 +8,12 @@ public class Pokemon {
     private ArrayList<PokemonAttack> attack;
     private int hp;
     private PokemonLevels pokemonLevels;
-    private int currentLvl;
-    private String[] weekAgainst;
+    protected int currentLvl;
+    private  WeekAgainst weekAgainst;
 
 
 
-    public Pokemon(int id, String name, String type, String pokemonDescription, int hp, int currentLvl, PokemonAttack attack1, PokemonAttack attack2, PokemonAttack attack3, PokemonLevels pokemonLevels){
+    public Pokemon(int id, String name, String type, String pokemonDescription, int hp, int currentLvl, PokemonAttack attack1, PokemonAttack attack2, PokemonAttack attack3, PokemonLevels pokemonLevels,WeekAgainst weekAgainst){
         this.id = id;
         this.name = name;
         this.type = type;
@@ -29,7 +29,7 @@ public class Pokemon {
         this.attack.add(attack3);
 
         this.pokemonLevels = pokemonLevels;
-
+        this.weekAgainst = weekAgainst;
     }
     public String getName() {
         return name;

@@ -7,10 +7,8 @@ public class StartingPokemons {
         PokemonAttack attack1 = new PokemonAttack("Tackle", 40, 0.05f);
         PokemonAttack attack2 = new PokemonAttack("Vine Whip", 45, 0.1f);
         PokemonAttack attack3 = new PokemonAttack("Razor Leaf", 50, 0.15f);
-
         PokemonLevels levels = new PokemonLevels(64, 125, 216, 343, 512, 729, 1000, 1331, 1728, 2197);
-
-
+        WeekAgainst weekAgainst = new WeekAgainst("nullFire", "Psychic", "Flying");
 
         Pokemon bulbasaur = new Pokemon(
             1,
@@ -22,11 +20,12 @@ public class StartingPokemons {
             attack1,
             attack2,
             attack3,
-            levels
-
+            levels,
+            weekAgainst
         );
-        System.out.println("Name: " + bulbasaur.getName());
+        bulbasaur.currentLvl = 0;
 
+        System.out.println("Name: " + bulbasaur.getName());
 
     }
 
